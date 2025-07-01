@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário candidatos emprego</title>
+
+<style>
+    body {
+        font-family: Georgia, serif;
+        background-color: peru;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-itens:center;
+        height: 200vh;
+    }
+
+    #form-container {
+        background-color: peachpuff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    
+    }
+
+    label {
+        display: block;
+        font-size: 15px;
+        color:#2b2b2bd
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    .input-group label {
+        margin-bottom: 5px;
+    }
+
+    .input-group .radio-group, .input-group .checkbox-group {
+        display: flex;
+        gap: 20px;
+    }
+
+    button {
+            background-color: #2b2b2b;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: peru;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            font-family: Georgia, serif; 
+            font-size: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #313131;
+            border-radius: 8px;
+            
+        }
+
+</style>
+
+
+
+</head>
+<body>
+    <div id="form-container">
+        <h2>Formulário de cadastro</h2>
+        <form action="/dados-do-form" method="post">
+            
+            <h4>Dados pessoais</h4>
+            <div class="input-group">
+                <label>Nome completo:</label>
+                <input type="text" id="nome" name="usuario_nome">
+            </div> 
+
+            <div class="input-group">
+                <label>E-mail:</label>
+                <input type="email" id="email" name="usuario_email">
+            </div> 
+
+            <div class="input-group">
+                <label>Celular:</label>
+                <input type="tel" id="tel" name="usuario_telefone">
+            </div> 
+
+            <div class="input-group">
+                <label>CPF:</label>
+                <input type="text" id="CPF" name="usuario_CPF">
+            </div> 
+
+            <div class="input-group">
+                <label>Data de nascimento:</label>
+                <input type="date" id="date" name="usuario_nascimento">
+            </div> 
+
+            <div class="input-group">
+                <label>Gênero:</label>
+                <div class="radio-group">
+                    <label for="male">
+                        <input type="radio" value="male" name="gender">Masculino
+                    </label> 
+                    <label for="female">
+                        <input type="radio" value="female" name="gender">Feminino
+                    </label>
+                    <label for="other">
+                        <input type="radio" value="other" name="gender">Outro
+                    </label>
+                    
+                </div>
+            </div> 
+
+            <div class="input-group">
+                <label for="state">Estado:</label>
+                <select name="state">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+
+                </select>
+                
+            </div>
+
+            <h4>Dados profissionais</h4>
+            <div class="input-group">
+                <label>LinkedIn:</label>
+                <input type="url" id="url" name="usuario_website">
+            </div> 
+
+            <div class="input-group">
+                <label>Currículo:</label>
+                <input type="file" id="file"  name="resume">
+            </div>
+            <p> </p>
+            <div class="input-group">
+                <label><b>Preferências de contato:</b></label>
+                <div class="checkbox-group">
+                    <label for="contact">
+                        <input type="checkbox" name="whatsapp"> WhatsApp
+                    </label>
+                    <label for="contact">
+                        <input type="checkbox" name="email"> E-mail
+                    </label>
+                    <label for="contact">
+                        <input type="checkbox" name="phone call"> Ligação
+                    </label>
+                </div> 
+            </div>
+
+            <div class="input-group">
+                <label for="message">Mensagem</label>
+                <textarea name="message" placeholder="Personalize sua candidatura"></textarea>
+            </div>
+
+            <div class="button">
+                <button type="submit">Enviar</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>
